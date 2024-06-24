@@ -1,9 +1,8 @@
-#n}}} 
+#
 # generic mappings, specific territories get mapped to these
 #
 # postcode before city
 generic1: &generic1 |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{{postcode}}} {{#first}} {{{postal_city}}} || {{{town}}} || {{{city}}} || {{{village}}} || {{{municipality}}} || {{{hamlet}}} || {{{county}}} || {{{state}}} {{/first}}
@@ -12,7 +11,6 @@ generic1: &generic1 |
 
 # postcode after city
 generic2: &generic2 |
-        {{{attention}}}
         {{#first}} {{{house}}}, {{{quarter}}} || {{{house}}} {{/first}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{village}}} || {{{town}}} || {{{city}}} || {{{municipality}}} || {{{hamlet}}} || {{{county}}} {{/first}} {{{postcode}}}
@@ -20,16 +18,13 @@ generic2: &generic2 |
 
 # postcode before city
 generic3: &generic3 |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
-        {{{place}}}
         {{{postcode}}} {{#first}} {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{city}}} || {{{municipality}}} || {{{state}}} {{/first}}        
         {{{country}}}
 
 # postcode after state
 generic4: &generic4 |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{village}}} || {{{hamlet}}} {{/first}}
@@ -38,7 +33,6 @@ generic4: &generic4 |
 
 # no postcode
 generic5: &generic5 |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}} 
@@ -47,7 +41,6 @@ generic5: &generic5 |
 
 # no postcode, county
 generic6: &generic6 |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} {{/first}} 
@@ -57,7 +50,6 @@ generic6: &generic6 |
 
 # city, postcode
 generic7: &generic7 |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}} 
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{state}}}{{/first}}, {{{postcode}}} 
@@ -65,14 +57,12 @@ generic7: &generic7 |
 
 # postcode and county
 generic8: &generic8 |
-        {{{attention}}}
         {{{house}}}
         {{{road}}}, {{{house_number}}} 
         {{{postcode}}} {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} {{/first}} {{#first}} {{{county_code}}} || {{{county}}} {{/first}}
         {{{country}}}
 
 generic9: &generic9 |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{state_district}}} {{/first}}
@@ -80,7 +70,6 @@ generic9: &generic9 |
         {{{country}}}
 
 generic10: &generic10 |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} {{/first}}
@@ -96,11 +85,9 @@ generic11: &generic11 |
         {{{suburb}}}
         {{{road}}}, {{{house_number}}}
         {{{house}}}
-        {{{attention}}}
 
 # city - postcode
 generic12: &generic12 |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}}, {{{road}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{state_district}}} {{/first}}
@@ -109,15 +96,13 @@ generic12: &generic12 |
         {{{country}}}
 
 generic13: &generic13 |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
-        {{#first}} {{{suburb}}} || {{{city_district}}} || {{{city}}} || {{{town}}} || {{{state_district}}} || {{{village}}} || {{{hamlet}}} || {{{region}}} {{/first}} {{#first}} {{{state_code}}} || {{{state}}} {{/first}} {{{postcode}}}
+        {{#first}} {{{suburb}}} || {{{city}}} || {{{town}}} || {{{state_district}}} || {{{village}}} || {{{hamlet}}} || {{{region}}} {{/first}} {{#first}} {{{state_code}}} || {{{state}}} {{/first}} {{{postcode}}}
         {{{country}}}
 
 # postcode and state
 generic14: &generic14 |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{{postcode}}} {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{state_district}}} {{/first}}
@@ -126,7 +111,6 @@ generic14: &generic14 |
 
 # postcode and comma before house number
 generic15: &generic15 |
-        {{{attention}}}
         {{{house}}}
         {{{road}}}, {{{house_number}}}
         {{{postcode}}} {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} || {{{state}}} || {{{county}}} {{/first}}
@@ -134,7 +118,6 @@ generic15: &generic15 |
 
 # no postcode, no state, just city
 generic16: &generic16 |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} || {{{county}}} || {{{state_district}}} || {{{state}}} {{/first}} 
@@ -142,7 +125,6 @@ generic16: &generic16 |
 
 # no postcode, no state, just city
 generic17: &generic17 |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}} 
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} || {{{county}}} || {{{state_district}}} || {{{state}}} {{/first}} 
@@ -150,7 +132,6 @@ generic17: &generic17 |
 
 # no postcode, just city comma after house number
 generic18: &generic18 |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}}, {{{road}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} || {{{state}}} {{/first}} 
@@ -158,7 +139,6 @@ generic18: &generic18 |
 
 # suburb and postcode after city
 generic19: &generic19 |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -167,7 +147,6 @@ generic19: &generic19 |
 
 # suburb and postcode after city
 generic20: &generic20 |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -176,7 +155,6 @@ generic20: &generic20 |
 
 # suburb and city, no postcode
 generic21: &generic21 |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}} 
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -185,7 +163,6 @@ generic21: &generic21 |
 
 # comma after housenumber, postcode before city
 generic22: &generic22 |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}}, {{{road}}}
         {{{postcode}}} {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{state}}} {{/first}}
@@ -193,7 +170,6 @@ generic22: &generic22 |
 
 # postcode on own line
 generic23: &generic23 |
-        {{{attention}}}
         {{house}}
         {{{house_number}}} {{{road}}}
         {{quarter}}
@@ -203,29 +179,23 @@ generic23: &generic23 |
 
 
 fallback1: &fallback1 |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
-        {{{place}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} || {{{island}}} {{/first}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} {{/first}}
         {{#first}} {{{county}}} || {{{state_district}}} || {{{state}}} || {{{region}}} || {{{island}}}, {{{archipelago}}} {{/first}}
         {{{country}}}
 
 fallback2: &fallback2 |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
-        {{{place}}}        
         {{#first}} {{{suburb}}} || {{{village}}} || {{{hamlet}}} {{/first}}
         {{#first}} {{{city}}} || {{{town}}} || {{{municipality}}} || {{{county}}} || {{{island}}} || {{{state_district}}} {{/first}}, {{#first}} {{{state}}} || {{{state_code}}} {{/first}}
         {{{country}}}
 
 fallback3: &fallback3 |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
-        {{{place}}}        
         {{#first}} {{{suburb}}} || {{{island}}} {{/first}}
         {{#first}} {{{village}}} || {{{hamlet}}} || {{{municipality}}} {{/first}}
         {{#first}} {{{town}}} || {{{city}}}{{/first}}
@@ -234,10 +204,8 @@ fallback3: &fallback3 |
         {{{country}}}
 
 fallback4: &fallback4 |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
-        {{{place}}}        
         {{{suburb}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} || {{{county}}} {{/first}}
         {{#first}} {{{state}}} || {{{county}}} {{/first}}
@@ -259,7 +227,6 @@ AD:
 # United Arab Emirates
 AE:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -278,7 +245,6 @@ AG:
 # Anguilla
 AI:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}} 
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}
@@ -287,7 +253,6 @@ AI:
 # Albania
 AL:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}} 
         {{{postcode}}} {{#first}} {{{city}}} || {{{town}}} || {{{city_district}}} || {{{municipality}}} || {{{state_district}}} || {{{village}}} || {{{hamlet}}} {{/first}}
@@ -299,7 +264,6 @@ AL:
 # Armenia
 AM:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{{postcode}}} 
@@ -314,7 +278,6 @@ AO:
 # Antarctica
 AQ:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}
         {{#first}} {{{country}}} || {{{continent}}} {{/first}}
@@ -366,7 +329,6 @@ BB:
 # Bangladesh
 BD:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{state_district}}} {{/first}}
@@ -376,7 +338,6 @@ BD:
 # Belgium
 BE:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{{postcode}}} {{#first}} {{{postal_city}}} || {{{town}}} || {{{city}}} || {{{village}}} || {{{municipality}}} || {{{hamlet}}} || {{{county}}} || {{{state}}} {{/first}}
@@ -387,9 +348,9 @@ BE:
 BF:
     address_template: *generic6
 
-# Bulgaria - https://en.wikipedia.org/wiki/Address#Bulgaria
+# Bulgaria
 BG:
-    address_template: *generic19
+    address_template: *generic9
 
 # Bahrain
 BH:
@@ -415,7 +376,6 @@ BM:
 # Brunei
 BN:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}}, {{{road}}} 
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} {{/first}} 
@@ -437,11 +397,10 @@ BQ:
 # Brazil
 BR:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
-        {{#first}} {{{suburb}}} || {{{city_district}}} || {{{village}}} || {{hamlet}}{{/first}}
-        {{#first}} {{{city}}} || {{{town}}} || {{{state_district}}} {{/first}} - {{#first}} {{{state_code}}} || {{{state}}} {{/first}}
+        {{#first}} {{{suburb}}} || {{{city_district}}} {{/first}}
+        {{#first}} {{{city}}} || {{{town}}} || {{{state_district}}} || {{{village}}} || {{{hamlet}}} {{/first}} - {{#first}} {{{state_code}}} || {{{state}}} {{/first}}
         {{{postcode}}}
         {{{country}}}
     postformat_replace:
@@ -450,7 +409,6 @@ BR:
 # Bahamas
 BS:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}} 
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} {{/first}} 
@@ -460,7 +418,6 @@ BS:
 # Bhutan
 BT:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}, {{{house}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -475,7 +432,6 @@ BV:
 # Botswana
 BW:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}} 
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -490,16 +446,14 @@ BY:
 BZ:
     address_template: *generic16
 
-# Canada - https://en.wikipedia.org/wiki/Address#Canada
+# Canada
 CA: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{#first}} {{{house_number}}} {{{road}}} || {{{suburb}}} {{/first}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{county}}} || {{{state_district}}} {{/first}}, {{#first}} {{{state_code}}} || {{{state}}} {{/first}} {{{postcode}}}
         {{{country}}}
     fallback_template: |
-        {{{attention}}}
         {{{house}}}
         {{#first}} {{{house_number}}} {{{road}}} || {{{suburb}}} {{/first}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{county}}} || {{{state_district}}} {{/first}}, {{#first}} {{{state_code}}} || {{{state}}} {{/first}} {{{postcode}}}
@@ -508,35 +462,6 @@ CA:
         # fix the postcode to make it \w\w\w \w\w\w
         - [" ([A-Za-z]{2}) ([A-Za-z]\\d[A-Za-z])(\\d[A-Za-z]\\d)\n"," $1 $2 $3\n"]
 
-#Canada - English
-CA_en: 
-    address_template: |
-        {{{attention}}}
-        {{{house}}}
-        {{#first}} {{{house_number}}} {{{road}}} || {{{suburb}}} {{/first}}
-        {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{county}}} || {{{state_district}}} {{/first}}, {{#first}} {{{state_code}}} || {{{state}}} {{/first}} {{{postcode}}}
-        {{{country}}}
-    fallback_template: |
-        {{{attention}}}
-        {{{house}}}
-        {{#first}} {{{house_number}}} {{{road}}} || {{{suburb}}} {{/first}}
-        {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{county}}} || {{{state_district}}} {{/first}}, {{#first}} {{{state_code}}} || {{{state}}} {{/first}} {{{postcode}}}
-        {{{country}}}
-    postformat_replace:
-        # fix the postcode to make it \w\w\w \w\w\w
-        - [" ([A-Za-z]{2}) ([A-Za-z]\\d[A-Za-z])(\\d[A-Za-z]\\d)\n"," $1 $2 $3\n"]
-
-#Canada - French Quebec
-CA_fr:
-    address_template: |
-        {{{attention}}}
-        {{{house}}}
-        {{#first}} {{{house_number}}}, {{{road}}} || {{{suburb}}} {{/first}}
-        {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{county}}} || {{{state_district}}} {{/first}} {{#first}} ({{{state_code}}}) || {{{state}}} {{/first}} {{{postcode}}}
-        {{{country}}}
-    postformat_replace:
-        # fix the postcode to make it \w\w\w \w\w\w
-        - [" ([A-Za-z]{2}) ([A-Za-z]\\d[A-Za-z])(\\d[A-Za-z]\\d)\n"," $1 $2 $3\n"]
 
 # Cocos (Keeling) Islands
 CC:
@@ -558,7 +483,6 @@ CG:
 # Switzerland
 CH:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{{postcode}}} {{#first}} {{{postal_city}}} || {{{town}}} || {{{city}}} || {{{municipality}}} || {{{village}}} || {{{hamlet}}} || {{{county}}} || {{{state}}} {{/first}}
@@ -577,16 +501,13 @@ CI:
 CK: 
     address_template: *generic16
 
-# Chile - https://en.wikipedia.org/wiki/Address#Chile
+# Chile
 CL: 
-    address_template: |
-        {{{attention}}}
-        {{{house}}}
-        {{{road}}} {{{house_number}}}
-        {{{postcode}}} {{#first}} {{{postal_city}}} || {{{town}}} || {{{city}}} || {{{village}}} || {{{municipality}}} || {{{hamlet}}} || {{{county}}} || {{{state}}} {{/first}}
-        {{{region}}}
-        {{{country}}}
-    
+    address_template: *generic1
+    postformat_replace:
+        # fix the postcode to make it \d\d\d \d\d\d\d
+        - ["\n(\\d{3})(\\d{4}) ","\n$1 $2 "]
+
 # Cameroon
 CM: 
     address_template: *generic17
@@ -601,36 +522,10 @@ CN:
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}        
         {{{road}}} {{{house_number}}}
         {{{house}}}
-        {{{attention}}}
 
-# China - English
-CN_en:
-    address_template: |
-        {{{attention}}}
-        {{{house}}}
-        {{{house_number}}} {{{road}}}
-        {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
-        {{{county}}}
-        {{#first}}{{{city}}} || {{{town}}} || {{{municipality}}}|| {{{village}}}|| {{{hamlet}}}{{/first}}
-        {{#first}} {{{state_code}}} || {{{state}}} || {{{state_district}}} || {{{region}}}{{/first}}
-        {{{country}}} {{{postcode}}}
-
-# China - Chinese Simplified
-CN_zh:
-    address_template: |
-        {{{postcode}}} {{{country}}}
-        {{#first}} {{{state_code}}} || {{{state}}} || {{{state_district}}} || {{{region}}}{{/first}}
-        {{{county}}}
-        {{#first}}{{{city}}} || {{{town}}} || {{{municipality}}}|| {{{village}}}|| {{{hamlet}}}{{/first}}
-        {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}        
-        {{{road}}} {{{house_number}}}
-        {{{house}}}
-        {{{attention}}}
-        
 # Colombia
 CO:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -645,7 +540,6 @@ CO:
 # Costa Rica
 CR:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{{state}}}, {{#first}} {{{city}}} || {{{town}}} || {{{state_district}}} || {{{village}}} || {{{hamlet}}} {{/first}}, {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -687,7 +581,6 @@ CZ:
 DE:
     address_template: *generic1
     fallback_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -733,7 +626,6 @@ DM:
 # Dominican Republic
 DO:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}} 
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -743,6 +635,8 @@ DO:
     postformat_replace:
         - [", Distrito Nacional",", DN"]
 
+
+
 # Algeria
 DZ:
     address_template: *generic3
@@ -750,7 +644,6 @@ DZ:
 # Ecuador
 EC:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{{postcode}}}
@@ -760,7 +653,6 @@ EC:
 # Egypt
 EG:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -829,14 +721,12 @@ FR:
         - ["Grande Terre et récifs d'Entrecasteaux",""]
         - ["France, Nouvelle-Calédonie","Nouvelle-Calédonie, France"]
         - ["\\(eaux territoriales\\)",""]
-        - ["state= \\(France\\)$",""]
         - ["Paris (\\d+)(\\w+) Arrondissement$","Paris"]
         
 
 # Gabon
 GA:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} || {{{village}}} || {{{hamlet}}} {{/first}}
@@ -929,7 +819,6 @@ GS:
 # Guatemala
 GT:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{{postcode}}}-{{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} || {{{state}}} {{/first}}
@@ -955,7 +844,6 @@ GY:
 # Hong Kong
 HK:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{{state_district}}}
@@ -964,7 +852,6 @@ HK:
 # Hong Kong - English
 HK_en:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{{state_district}}}
@@ -980,7 +867,6 @@ HK_zh:
         {{{road}}}
         {{{house_number}}}
         {{{house}}}
-        {{{attention}}}
 
 
 # Heard Island and McDonald Islands - same as Australia
@@ -1006,7 +892,6 @@ HT:
 # Hungary
 HU:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}} 
         {{{road}}} {{{house_number}}} 
@@ -1017,7 +902,6 @@ HU:
 # https://en.wikipedia.org/wiki/Address_%28geography%29#Indonesia
 ID:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -1029,7 +913,6 @@ ID:
 # https://en.wikipedia.org/wiki/Postal_addresses_in_the_Republic_of_Ireland
 IE: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -1076,7 +959,6 @@ IO:
 # Iraq
 IQ: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{#first}} {{{city_district}}} || {{{neighbourhood}}} || {{{suburb}}} {{/first}}
         {{{road}}}         
@@ -1087,7 +969,6 @@ IQ:
 # Iran
 IR:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -1099,7 +980,6 @@ IR:
 
 IR_en:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -1120,7 +1000,6 @@ IR_fa:
         {{{road}}}
         {{{house_number}}}
         {{{house}}}
-        {{{attention}}}
         {{{postcode}}}
 
 # Iceland
@@ -1153,7 +1032,6 @@ JO:
 # Japan
 JP:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -1168,7 +1046,6 @@ JP:
 # Japan - English
 JP_en:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -1190,7 +1067,6 @@ JP_ja:
         {{{road}}}
         {{{house_number}}}
         {{{house}}}
-        {{{attention}}}
     postformat_replace:
         # fix the postcode to make it \d\d\d-\d\d\d\d
         - [" (\\d{3})(\\d{4})\n"," $1-$2\n"]
@@ -1198,7 +1074,6 @@ JP_ja:
 # Kenya
 KE:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{state}}} || {{{village}}} || {{{hamlet}}} {{/first}}
@@ -1212,7 +1087,6 @@ KG:
 # Cambodia
 KH:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -1226,7 +1100,6 @@ KI:
 # Comoros
 KM:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}
@@ -1236,7 +1109,6 @@ KM:
 # Saint Kitts and Nevis
 KN: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}, {{#first}} {{{state}}} || {{{island}}} {{/first}}
@@ -1246,23 +1118,20 @@ KN:
 KP: 
     address_template: *generic21
 
-# Republic of Korea / South Korea -- https://en.wikipedia.org/wiki/Address#South_Korea
+# Republic of Korea / South Korea
 KR: 
     address_template: |
+        {{{house}}}
+        {{{house_number}}} {{{road}}} 
+        {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}, {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}, {{{state}}} {{{postcode}}}
         {{{country}}}
-        {{{state}}}
-        {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}, {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}, {{{road}}} {{{house_number}}}
-        {{{attention}}}
-        {{{postcode}}}
 
 # South Korea - English
 KR_en:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
-        {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}, {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}} {{/first}} {{{postcode}}} 
-        {{{state}}}
+        {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}, {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}, {{#first}} {{{state}}} {{/first}} {{{postcode}}} 
         {{{country}}}
 
 # South Korea - Korean
@@ -1270,14 +1139,16 @@ KR_ko:
     address_template: |
         {{{country}}}
         {{#first}} {{{state}}} {{/first}} 
-        {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}, {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}, {{{road}}} {{{house_number}}}
-        {{{attention}}}
+        {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}
+        {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
+        {{{road}}}
+        {{{house_number}}} 
+        {{{house}}}
         {{{postcode}}}
 
 # Kuwait
 KW:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
 
@@ -1352,7 +1223,6 @@ MC:
 # Moldova
 MD:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}}, {{{house_number}}}
         {{{postcode}}} {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{state}}} {{/first}}
@@ -1375,7 +1245,6 @@ MH:
 # Madagascar
 MG:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -1393,7 +1262,6 @@ ML:
 # Myanmar (Burma)
 MM:
     address_template: | 
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{state}}} {{/first}}, {{{postcode}}} 
@@ -1403,7 +1271,6 @@ MM:
 # Mongolia
 MN:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{city_district}}} 
         {{#first}} {{{suburb}}} || {{{neighbourhood}}} {{/first}}
@@ -1416,7 +1283,6 @@ MN:
 # Macau
 MO:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{suburb}}} || {{{village}}} || {{{hamlet}}} || {{{state_district}}} {{/first}}
@@ -1425,7 +1291,6 @@ MO:
 # Macao - Portuguese
 MO_pt:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{suburb}}} || {{{village}}} || {{{hamlet}}} || {{{state_district}}} {{/first}}
@@ -1439,7 +1304,6 @@ MO_zh:
         {{{road}}}
         {{{house_number}}}    
         {{{house}}}
-        {{{attention}}}
 
 # Northern Mariana Islands
 MP:
@@ -1454,7 +1318,6 @@ MS:
 # Malta
 MT:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{#first}} {{{city}}} || {{{town}}} || {{{suburb}}} || {{{village}}} || {{{hamlet}}} {{/first}} 
@@ -1473,7 +1336,6 @@ MR:
 # Mauritius
 MU:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}}, {{{road}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -1491,7 +1353,6 @@ MW:
 # Mexico
 MX:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -1501,7 +1362,6 @@ MX:
 # Malaysia
 MY:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -1526,7 +1386,6 @@ NC:
 # Niger
 NE: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} 
         {{{road}}}
@@ -1542,7 +1401,6 @@ NF:
 # Nigeria
 NG: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}} {{{postcode}}}
@@ -1570,7 +1428,6 @@ NL:
 # Nepal
 NP: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}} 
         {{#first}} {{{suburb}}} || {{{neighbourhood}}} || {{{city}}} {{/first}}
@@ -1594,7 +1451,6 @@ NZ:
 # Oman
 OM:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{{postcode}}}
@@ -1605,7 +1461,6 @@ OM:
 # Panama
 PA:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -1632,25 +1487,23 @@ PF:
 # Papau New Guinea
 PG:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}} {{{postcode}}} {{{state}}} 
         {{{country}}}
 
-# Philippines - https://en.wikipedia.org/wiki/Address#Philippines
+# Philippines
 PH:
     address_template: |
-        {{{attention}}}
         {{{house}}}
-        {{{house_number}}} {{{road}}}, {{#first}} {{{suburb}}}, || {{{city_district}}}, || {{{neighbourhood}}}, {{/first}} {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{suburb}}} || {{{state_district}}} {{/first}}
-        {{{postcode}}} {{#first}} {{{municipality}}} {{{region}}} {{{state}}} {{/first}}
-        {{{country}}} 
-        
+        {{{house_number}}} {{{road}}}
+        {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{suburb}}} || {{{state_district}}} {{/first}}
+        {{{postcode}}} {{{state}}}
+        {{{country}}}
+
 # Pakistan
 PK:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
@@ -1673,7 +1526,6 @@ PM:
 # Pitcairn Islands
 PN:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{island}}} {{/first}} 
         {{{country}}}
@@ -1726,7 +1578,6 @@ RS:
 RU:
     address_template: *generic10
     fallback_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} || {{{island}}} || {{{village}}} || {{{hamlet}}} {{/first}}
@@ -1741,7 +1592,6 @@ RW:
 # Saudi Arabia
 SA:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}, {{#first}} {{{village}}} || {{{hamlet}}} || {{{city_district}}} || {{{suburb}}} || {{{neighbourhood}}} {{/first}}
         {{#first}} {{{city}}} || {{{town}}} || {{{state_district}}} {{/first}} {{{postcode}}}
@@ -1754,7 +1604,6 @@ SB:
 # Seychelles
 SC: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{island}}} {{/first}} 
@@ -1775,7 +1624,6 @@ SE:
 # Singapore
 SG:
     address_template: |
-        {{{attention}}}
         {{#first}} {{{house}}}, {{{quarter}}} || {{{house}}} {{/first}}
         {{{house_number}}} {{{road}}}, {{{residential}}}
         {{#first}} {{{country}}} || {{{town}}} || {{{city}}} || {{{municipality}}} || {{{hamlet}}} || {{{village}}} || {{{county}}} {{/first}} {{{postcode}}}
@@ -1798,7 +1646,6 @@ SJ:
 # Slovakia
 SK: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{{postcode}}} {{#first}} {{{postal_city}}} || {{{city}}} || {{{town}}} || {{{village}}} || {{{municipality}}} || {{{city_district}}} || {{{hamlet}}} || {{{county}}} || {{{state}}} {{/first}}
@@ -1845,7 +1692,6 @@ ST:
 # El Salvador
 SV: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}} 
         {{{postcode}}} - {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}} 
@@ -1861,7 +1707,6 @@ SX:
 # Syria
 SY: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}}, {{{house_number}}}
         {{#first}} {{{village}}} || {{{hamlet}}} || {{{city_district}}} || {{{neighbourhood}}} || {{{suburb}}} {{/first}}
@@ -1873,7 +1718,6 @@ SY:
 # Swaziland
 SZ: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{state}}} {{/first}}
@@ -1897,10 +1741,9 @@ TF:
 TG:
     address_template: *generic18
 
-# Thailand -- https://en.wikipedia.org/wiki/Thai_addressing_system
+# Thailand
 TH:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{#first}} {{{village}}} || {{{hamlet}}} {{/first}}
         {{{road}}} 
@@ -1940,7 +1783,6 @@ TR:
 # Trinidad and Tobago
 TT:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{state_district}}} {{/first}}
@@ -1950,37 +1792,29 @@ TT:
 # Tuvalu
 TV: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} {{/first}}
         {{#first}} {{{county}}} || {{{state_district}}} || {{{state}}} || {{{island}}} {{/first}}
         {{{country}}}
 
-# Taiwan -- https://en.wikipedia.org/wiki/Address#Taiwan
+# Taiwan
 TW: 
-    address_template: |
-        {{{country}}}
-        {{{postcode}}}
-        {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} {{/first}} {{#first}} {{{city_district}}} || {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}} {{{road}}} {{{house_number}}}
-        {{{house}}}
-        {{{attention}}}
+    address_template: *generic20
 
 TW_en:
-    address_template: |
-        {{{attention}}}
-        {{{house}}}
-        {{{house_number}}}, {{{road}}} 
-        {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}, {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}} {{{postcode}}}
-        {{{country}}}
+    address_template: *generic20
 
 TW_zh:
     address_template: |
         {{{country}}}
         {{{postcode}}}
-        {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} {{/first}} {{#first}} {{{city_district}}} || {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}} {{{road}}} {{{house_number}}}
+        {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} {{/first}}
+        {{{city_district}}}
+        {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}
+        {{{road}}}
+        {{{house_number}}}
         {{{house}}}
-        {{{attention}}}
 
 # Tanzania
 TZ:
@@ -1989,15 +1823,13 @@ TZ:
     postformat_replace:
         - ["Dar es Salaam\nDar es Salaam","Dar es Salaam"]
 
-# Ukraine -- https://en.wikipedia.org/wiki/Address#Ukraine
+# Ukraine
 UA:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}}, {{{house_number}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{state_district}}} {{/first}}
-        {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} {{/first}}
-        {{#first}} {{{region}}} || {{{state}}} {{/first}}
+        {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{municipality}}} || {{{state}}} {{/first}}
         {{{postcode}}} 
         {{{country}}}
 
@@ -2029,7 +1861,6 @@ US:
 # Uzbekistan
 UZ:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}} 
@@ -2052,7 +1883,6 @@ VC:
 # Venezuela
 VE:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{road}}} {{{house_number}}}
         {{#first}} {{{city}}} || {{{town}}} || {{{state_district}}} || {{{village}}} || {{{hamlet}}} {{/first}} {{{postcode}}}, {{#first}} {{{state_code}}} || {{{state}}} {{/first}}
@@ -2061,7 +1891,6 @@ VE:
 # British Virgin Islands
 VG:
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}} 
         {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} {{/first}}, {{{island}}}
@@ -2073,14 +1902,12 @@ VI:
     change_country: United States of America
     add_component: state=US Virgin Islands
 
-# Vietnam -- https://en.wikipedia.org/wiki/Address#Vietnam
+# Vietnam
 VN:
     address_template: |
-        {{{attention}}}
         {{{house}}}
-        {{{house_number}}} {{{road}}}
-        {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}} 
-        {{#first}} {{{city}}} || {{{town}}} || {{{village}}} || {{{hamlet}}} || {{{state_district}}} {{/first}}
+        {{{house_number}}}, {{{road}}}
+        {{#first}} {{{suburb}}} || {{{city_district}}} || {{{neighbourhood}}} {{/first}}, {{#first}} {{{city}}} || {{{town}}} || {{{state_district}}} || {{{village}}} || {{{hamlet}}} {{/first}}
         {{{state}}} {{{postcode}}}
         {{{country}}}
 
@@ -2109,7 +1936,6 @@ YT:
 # South Africa
 ZA: 
     address_template: |
-        {{{attention}}}
         {{{house}}}
         {{{house_number}}} {{{road}}}
         {{#first}} {{{suburb}}} || {{{city_district}}} || {{{state_district}}} {{/first}}
